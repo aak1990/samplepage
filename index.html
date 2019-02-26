@@ -15,6 +15,7 @@
       console.log("onload sample page");
       console.log("opener",opener);
       opener.postMessage("msg1",'*');
+      opener.callParentFunc2();
   }
 
   window.beforeunload = function() {
