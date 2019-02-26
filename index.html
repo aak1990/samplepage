@@ -13,14 +13,14 @@
   <script>
   window.onload = function() {
       console.log("onload sample page");
-      opener.callParentFunc1();
-      opener.postMessage("msg1 from child",'*')
+      console.log("opener",opener);
+      opener.postMessage("msg1",'*');
   }
 
   window.beforeunload = function() {
       console.log("beforeunload sample page");
-      opener.callParentFunc2();
-      opener.postMessage("msg2 from child",'*')
+     // opener.callParentFunc2();
+      opener.postMessage("msg2",'*')
   }
   </script>
 </body>
