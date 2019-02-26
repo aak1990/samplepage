@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>My Sample Page</title>
+</head>
+
+<body>
+ Hello, this is a sample page
+ 
+  <script>
+  window.onload = function() {
+      console.log("onload");
+      opener.callParentFunc1();
+      opener.postMessage("msg1",'*')
+  }
+
+  window.beforeunload = function() {
+      console.log("beforeunload");
+      opener.callParentFunc2();
+      opener.postMessage("msg2",'*')
+  }
+  </script>
+</body>
+
+</html>
